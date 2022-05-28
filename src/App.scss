@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+ 
+body{
+  margin: 0;
+}
+
+.nav{
+  background-color: #cfd881;
+ 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+  ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+    }
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;}
+    li.active{
+      background-color: #61dafb;
+    }
+    &:hover{
+    background-color: #a6c7d6;
+  }
+ 
+}
+
+
+
+.Logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50px;
+  height: auto;
+  background-image: url(./Img/health-food-logo.png);
+}
+
+
