@@ -1,33 +1,30 @@
 import './App.scss';
-
 // import { useState } from 'react';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import About from './Components/About';
 import SignInForm from './Components/SignInForm';
-import LogInForm from './Components/LogInForm';
+import Account from './Components/Account';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-    let component;
-    switch (window.location.pathname) {
-        case '/':
-            component = <Home></Home>;
-            break;
-        case '/About':
-            component = <About></About>;
-            break;
-        case '/Sign in':
-            component = <SignInForm></SignInForm>;
-            break;
-        case '/Log in':
-            component = <LogInForm></LogInForm>;
-            break;
-        default:
-    }
     return (
         <>
             <NavBar></NavBar>
-            <div>{component}</div>
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<Home></Home>}></Route>
+                    <Route
+                        path="/Sign in"
+                        element={<SignInForm></SignInForm>}
+                    ></Route>
+                    <Route path="/About" element={<About></About>}></Route>
+                    <Route
+                        path="/Account"
+                        element={<Account></Account>}
+                    ></Route>
+                </Routes>
+            </div>
         </>
     );
 }

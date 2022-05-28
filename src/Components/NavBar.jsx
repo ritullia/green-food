@@ -1,31 +1,34 @@
 import React from 'react';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import logo from '../Img/health-food-logo.png';
+// import { useState } from 'react';
 
 function NavBar() {
     return (
         <nav className="nav">
             <img src={logo} width="50px" alt="health-logo" href="/"></img>
-            <a href="/" className="site-title">
+            <Link to="/" className="main-title">
                 green food
-            </a>
+            </Link>
             <ul>
-                <li className="active">
-                    <a href="/Sign in" className="site-title">
-                        Sign in
-                    </a>
-                </li>
-                <li>
-                    <a href="/Log in" className="site-title">
-                        Log in
-                    </a>
-                </li>
-                <li>
-                    <a href="/About" className="site-title">
-                        About
-                    </a>
-                </li>
+                <CustomLink to="/Sign in">Sign in</CustomLink>
+                <CustomLink to="/Account">Account</CustomLink>
+                <CustomLink to="/About">About</CustomLink>
             </ul>
         </nav>
+    );
+}
+
+function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to);
+    const isActive = useMatch({ path: resolvedPath.pathname, enf: true });
+
+    return (
+        <li className={isActive ? 'active' : ''}>
+            <Link to={to} {...props}>
+                {children}
+            </Link>
+        </li>
     );
 }
 
