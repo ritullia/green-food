@@ -18,11 +18,11 @@ function App() {
                         path="/Sign in"
                         element={<SignInForm></SignInForm>}
                     ></Route>
-                    <Route path="/About" element={<About></About>}></Route>
                     <Route
                         path="/Account"
                         element={<Account></Account>}
                     ></Route>
+                    <Route path="/About" element={<About></About>}></Route>
                 </Routes>
             </div>
         </>
