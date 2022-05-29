@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import About from './Components/About';
 import SignInForm from './Components/SignInForm';
+import Calck from './Components/Calck';
 import Account from './Components/Account';
 import { Route, Routes } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
                         element={<Account></Account>}
                     ></Route>
                     <Route path="/About" element={<About></About>}></Route>
+                    <Route path="/Calck" element={<Calck></Calck>}></Route>
                 </Routes>
             </div>
         </>

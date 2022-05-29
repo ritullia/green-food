@@ -27,7 +27,6 @@ function LogInForm() {
     };
     return (
         <div className="form-container">
-            <h1>Please sign in</h1>;
             <form className="register-form" onSubmit={handleSubmit}>
                 {submitted && valid ? (
                     <div className="succses-message">
@@ -41,7 +40,7 @@ function LogInForm() {
                     placeholder="First Name"
                 ></input>
                 {submitted && !values.firstName ? (
-                    <span>Please enter a first name</span>
+                    <span className="inform">Please enter a first name</span>
                 ) : null}
                 <input
                     onChange={handleLastNameInputChange}
@@ -50,7 +49,7 @@ function LogInForm() {
                     placeholder="Last Name"
                 ></input>
                 {submitted && !values.lastName ? (
-                    <span>Please enter a last name</span>
+                    <span className="inform">Please enter a last name</span>
                 ) : null}
                 <input
                     onChange={handleEmailInputChange}
@@ -59,7 +58,7 @@ function LogInForm() {
                     placeholder="E-mail"
                 ></input>
                 {submitted && !values.Email ? (
-                    <span>Please enter an e-mail</span>
+                    <span className="inform">Please enter an e-mail</span>
                 ) : null}
                 <button className="btn form-field" type="submit">
                     Sign in

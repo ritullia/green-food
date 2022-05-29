@@ -6,13 +6,19 @@ import logo from '../Img/health-food-logo.png';
 function NavBar() {
     return (
         <nav className="nav">
-            <img src={logo} width="50px" alt="health-logo" href="/"></img>
+            <img
+                src={logo}
+                width="50px"
+                alt="health-logo"
+                className="Logo"
+                href="/"
+            ></img>
             <Link to="/" className="main-title">
                 green food
             </Link>
             <ul>
-                <CustomLink to="/Sign in">Sign in</CustomLink>
                 <CustomLink to="/Account">Account</CustomLink>
+                <CustomLink to="/Calck">BMI</CustomLink>
                 <CustomLink to="/About">About</CustomLink>
             </ul>
         </nav>
