@@ -8,7 +8,7 @@ function Meal({ meal }) {
     useEffect(() => {
         axios
             .get(
-                `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=bc60fb9eac3249f984e75afc9cdc0972&diet=[2]`
+                `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=bc60fb9eac3249f984e75afc9cdc0972&diet`
             )
             .then((res) => {
                 console.log(res.data);
