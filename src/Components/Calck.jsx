@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import MealSelector from './MealSelector';
 
-function Calck() {
-    const [weight, setWeight] = useState(0);
-    const [height, setHeight] = useState(0);
+function Calck({ mealData }) {
+    const [weight, setWeight] = useState('');
+    const [height, setHeight] = useState('');
     const [bmi, setBmi] = useState('');
     const [message, setMessage] = useState('');
 
@@ -83,6 +84,12 @@ function Calck() {
             </div>
             <div>
                 {<img src={imgSrc} alt="" className="img-container"></img>}
+            </div>
+            <div>
+                <div>Yours day callories</div>
+                <div className="bmi-form">
+                    <MealSelector></MealSelector>
+                </div>
             </div>
         </div>
     );
