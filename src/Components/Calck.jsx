@@ -6,6 +6,7 @@ function Calck({ mealData }) {
     const [height, setHeight] = useState('');
     const [bmi, setBmi] = useState('');
     const [message, setMessage] = useState('');
+    const [msgCalories, setMsgCalories] = useState('');
 
     const calckBmi = (e) => {
         e.preventDefault();
@@ -19,6 +20,7 @@ function Calck({ mealData }) {
                 setMessage('You are underweight');
             } else if (bmi >= 18.5 && bmi < 25) {
                 setMessage('You are a healthy');
+                setMsgCalories('the number of calories required');
             } else {
                 setMessage('You are overweight');
             }
@@ -81,12 +83,17 @@ function Calck({ mealData }) {
             <div className="center">
                 <h3>Your BMI is: {bmi}</h3>
                 <p>{message}</p>
+                <p>{msgCalories}</p>
             </div>
             <div>
                 {<img src={imgSrc} alt="" className="img-container"></img>}
             </div>
+
             <div>
-                <div>Yours day callories</div>
+                <div>
+                    <span>Please insert calories</span>
+                </div>
+
                 <div className="bmi-form">
                     <MealSelector></MealSelector>
                 </div>

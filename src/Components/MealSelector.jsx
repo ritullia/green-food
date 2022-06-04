@@ -4,16 +4,20 @@ import MealList from './MealList';
 
 function MealSelector() {
     const [mealData, setMealData] = useState(null);
-    const [caloriesValue, setCaloriesValue] = useState(2500);
+    const [caloriesValue, setCaloriesValue] = useState(false);
 
     useEffect(() => {
         axios
             .get(
-                `https://api.spoonacular.com/mealplanner/generate?apiKey=6bfec5629ef040a99ea07c1a7cb12c7e&timeFrame=day&targetCalories=${caloriesValue}`
+                `https://api.spoonacular.com/mealplanner/generate?apiKey=bc60fb9eac3249f984e75afc9cdc0972&timeFrame=day&targetCalories=${caloriesValue}`
             )
             .then((res) => {
                 console.log(res.data);
-                // setMealData(res.data);
+                setMealData(res.data);
+                return;
+            })
+            .catch((err) => {
+                console.log(err);
             });
     }, [caloriesValue]);
 
@@ -21,16 +25,21 @@ function MealSelector() {
         setCaloriesValue(e.target.value);
     };
 
+    // const clearCaloriesInput = () => setCaloriesValue(false);
+
     const getMealPlan = (e) => {
         setMealData(mealData);
+    };
+    const reload = () => {
+        window.location.reload();
     };
 
     return (
         <>
-            <div>
-                <section className="control">
+            <div className="controls">
+                <section className="input">
                     <input
-                        className="form-field"
+                        className="calories form-field"
                         type="number"
                         placeholder="Calories (e.g. 2500)"
                         onChange={handleChange}
@@ -39,8 +48,11 @@ function MealSelector() {
                 </section>
                 <button onClick={getMealPlan} className="btn form-field">
                     Daily Meal Plan
-                    {mealData && <MealList mealData={mealData}></MealList>}
                 </button>
+                <button onClick={reload} className="btn form-field">
+                    Reload Meal Plan
+                </button>
+                {mealData && <MealList mealData={mealData}></MealList>}
                 <section></section>
             </div>
         </>

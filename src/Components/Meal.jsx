@@ -1,17 +1,35 @@
 import React from 'react';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 function Meal({ meal }) {
     const [imgUrl, setImgUrl] = useState('');
+
+    useEffect(() => {
+        axios
+            .get(
+                `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=bc60fb9eac3249f984e75afc9cdc0972&diet=[2]`
+            )
+            .then((res) => {
+                console.log(res.data);
+                setImgUrl(res.data.image);
+                return [];
+            })
+            .catch(() => {
+                console.log('err');
+            });
+    }, [meal.id]);
     return (
-        <article>
+        <article className="article">
             <h1>{meal.title}</h1>
-            <img src={imgUrl} alt="recipe" />
+            <img src={imgUrl} alt="recipes" />
             <ul>
                 <li>Preparation time: {meal.readyInMinutes} minutes</li>
                 <li>Number of servings: {meal.servings}</li>
             </ul>
-            <a href={meal.sourceUrl}>Go to recipe</a>
+            <a href={meal.sourceUrl} className="btn form-field">
+                Go to recipe
+            </a>
         </article>
     );
 }

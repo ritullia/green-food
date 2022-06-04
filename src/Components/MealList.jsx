@@ -7,12 +7,12 @@ function MealList({ mealData }) {
     return (
         <div>
             <section className="nutrients">
-                <h1>Nutrients</h1>
-                <ul>
-                    <li>Calories: {nutrients.calories}</li>
-                    <li>Carbohydrates: {nutrients.carbohydrates}</li>
-                    <li>Fat: {nutrients.fat}</li>
-                    <li>Protein: {nutrients.protein}</li>
+                <h1 style={{ color: '#939b4b' }}>Nutrients</h1>
+                <ul className="ul-table">
+                    <li>Calories: {nutrients.calories.toFixed(0)}</li>
+                    <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
+                    <li>Fat: {nutrients.fat.toFixed(0)}</li>
+                    <li>Protein: {nutrients.protein.toFixed(0)}</li>
                 </ul>
             </section>
             <section className="meals">
