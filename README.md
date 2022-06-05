@@ -28,6 +28,14 @@ Design: by Rita Cincilevičienė
 
 Rita: https://github.com/ritullia
 
+## About app
+
+App about meal planning:
+
+-   select BMI --> here You can enter you data and find out your BMI;
+-   enter the number of calories per day;
+-   will choose 3 dishes for day;
+
 ## Available Scripts
 
 In the project directory, you can run:
