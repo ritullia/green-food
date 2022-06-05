@@ -8,7 +8,6 @@ import Calck from './Components/Calck';
 import Account from './Components/Account';
 import { Route, Routes } from 'react-router-dom';
 import MealSelector from './Components/MealSelector';
-import MealList from './Components/MealList';
 
 function App() {
     return (

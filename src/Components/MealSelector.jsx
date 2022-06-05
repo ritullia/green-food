@@ -9,7 +9,7 @@ function MealSelector() {
     useEffect(() => {
         axios
             .get(
-                `https://api.spoonacular.com/mealplanner/generate?apiKey=bc60fb9eac3249f984e75afc9cdc0972&timeFrame=day&targetCalories=${caloriesValue}`
+                `https://api.spoonacular.com/mealplanner/generate?apiKey=72920310c5b046bcb70821a0d20012d2&timeFrame=day&targetCalories=${caloriesValue}`
             )
             .then((res) => {
                 console.log(res.data);
