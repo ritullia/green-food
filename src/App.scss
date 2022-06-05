@@ -47,11 +47,10 @@ body{
   }
 }
 .main-title {
-  //  display: flex;
-  //  justify-content: flex-start;
-  //  align-items: flex-start;
    padding: 5px;
    margin-top: 1.5rem;
+   margin-left: -420px;
+   
 }
 .nav li.active{
   background-color:#cfd881;;
@@ -64,8 +63,9 @@ body{
 
 .Logo {
   display: flex;
-  align-items:center;
+  justify-items: center;
   margin-top: 10px;
+  margin-left: 2rem;
   width: 50px;
   height: auto;
   background-image: url(./Img/health-food-logo.png);
@@ -219,6 +219,35 @@ section{
     flex-direction: column;
     align-items: center;
   }
+  .Logo{
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .main-title{
+    margin-left: 0px;
+    padding: 0px;
+    
+  }
+  .nav{
+      padding: 2px;
+  }
+ 
+}
+@media only screen and (min-width: 400px){
+  .main-title{
+  margin-left: 0px;
+  font-size: 0.3rem
+  }
+  .Logo {
+      margin-left: 50px;
+    }
+  
+   p {
+      padding: 3rem;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
 }
 
 .nutrients ul {
@@ -244,4 +273,13 @@ img{
   height: 100%;
   margin-bottom: 1rem;
 
+}
+
+p{
+  padding: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+h1 {
+  margin-top: 30px;
 }

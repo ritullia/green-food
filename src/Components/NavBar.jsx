@@ -13,8 +13,15 @@ function NavBar() {
                 className="Logo"
                 href="/"
             ></img>
-            <Link to="/" className="main-title">
-                green food
+            <Link
+                to="/"
+                className="main-title"
+                style={{
+                    fontFamily:
+                        "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+                }}
+            >
+                GREEN FOOD
             </Link>
             <ul>
                 <CustomLink to="/Account">Account</CustomLink>
