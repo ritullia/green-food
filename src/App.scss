@@ -25,8 +25,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
+  gap: 1rem;
+  padding: 0 2rem;
   ul {
       padding: 0;
       margin: 0;
@@ -47,12 +47,12 @@ body{
   }
 }
 .main-title {
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-start;
+  //  display: flex;
+  //  justify-content: flex-start;
+  //  align-items: flex-start;
    padding: 5px;
- }
-
+   margin-top: 1.5rem;
+}
 .nav li.active{
   background-color:#cfd881;;
 }
@@ -64,7 +64,8 @@ body{
 
 .Logo {
   display: flex;
-  align-items: center;
+  align-items:center;
+  margin-top: 10px;
   width: 50px;
   height: auto;
   background-image: url(./Img/health-food-logo.png);
