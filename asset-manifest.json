@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52a98548.css",
+    "main.js": "/static/js/main.7dcda10a.js",
+    "static/js/787.6368cad5.chunk.js": "/static/js/787.6368cad5.chunk.js",
+    "static/media/underweight.png": "/static/media/underweight.d934c9354017205e90aa.png",
+    "static/media/overweight.png": "/static/media/overweight.591058375e5aa2b4d3ef.png",
+    "static/media/normal.png": "/static/media/normal.f7b4d65f00b11a514070.png",
+    "static/media/health-food-logo.png": "/static/media/health-food-logo.4c883c5235c17a2ac050.png",
+    "index.html": "/index.html",
+    "main.52a98548.css.map": "/static/css/main.52a98548.css.map",
+    "main.7dcda10a.js.map": "/static/js/main.7dcda10a.js.map",
+    "787.6368cad5.chunk.js.map": "/static/js/787.6368cad5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52a98548.css",
+    "static/js/main.7dcda10a.js"
+  ]
+}
